@@ -65,7 +65,7 @@ if __name__ == '__main__':
                         if h_code == 200:
                             print "yes"
                         else:
-                            content_sql = "set names 'gbk';" + "\n" + "insert into ultrax.msgsend (service, srcNo,destNo,  msgcontent) values ('30','10000', '1891043871', '【万步网】server " + URL +" may be down,pelase check.');"
+                            content_sql = "set names 'gbk';" + "\n" + "insert into ultrax.msgsend (service, srcNo,destNo,  msgcontent) values ('30','10000', 'phonenu', 'server " + URL +" may be down,pelase check.');"
 
                             content_sql = content_sql.decode("utf-8")
 
@@ -75,7 +75,7 @@ if __name__ == '__main__':
 
                             try:
 
-                                conn = MySQLdb.Connect(host='192.168.1.8',user='wanbusms',passwd='wanbu@sms',port=3306)
+                                conn = MySQLdb.Connect(host='hostname',user='username',passwd='password',port=3306)
 
                                 cur = conn.cursor()
 
